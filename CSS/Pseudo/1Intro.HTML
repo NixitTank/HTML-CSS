@@ -6,49 +6,130 @@
     <title>1 Intro</title>
 
     <style>
-        input:focus{
-            background-color: lightgrey;
-        }
 
-        input:invalid {
-            background-color: ivory;
-            border: none;
-            outline: 2px solid red;
-            border-radius: 5px;
-          }
+      /* :active pseudo class */
 
-        input[type='checkbox']:checked{
-            background-color: 2px aqua;
-            outline: 2px solid red ;
-        }
-        
-        img:hover{
-            width: 500px;
-            outline: solid black ;
-        }
+      .active{
+        background-color: slategrey;
+        border: none;
+        width: 140px;
+        height: 40px;
+      }
 
-        div p {
-            outline: red solid 3px;
-        }
+      a:any-link{
+        color: blueviolet;
+        text-decoration-color:red ;
+      }
 
-        div:empty {
-            outline: 2px solid deeppink;
-            height: 1em;
-        }
-        
-    </style>
+      input:invalid {
+        border: none;
+        outline: 2px solid red;
+        border-radius: 5px;
+      }
+
+      input:focus{
+        background-color: rgb(194, 209, 224);
+      }
+
+      input[type='checkbox']:checked {
+        border: 2px solid rgb(28, 255, 20);
+        outline: 2px solid rgb(20, 212, 255);
+    }
+
+
+      
+
+     </style>
 
 </head>
 <body>
 
-    <h1><center>Intro</center></h1>
+
+
+    <h1><center>Pseudo Classes</center></h1>
+
+  <fieldset>
+    <h2>:active</h2>
+
+    <p>
+      The :active CSS pseudo-class represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.
+    </p>
+
+    <strong>Example:</strong> <br><br>
+
+    <button class="active" >Submit</button>
+
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+    <h2>:any-link</h2>
+
+    <p>
+      The :any-link CSS pseudo-class selector represents an element that acts as the source anchor of a hyperlink, independent of whether it has been visited.
+    </p>
+
+    <strong>Example:</strong> <br><br>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:any-link">MDN Web Docs</a>
+
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+    <h2>
+      :autofill
+    </h2>
+
+    <p>
+      The :autofill CSS pseudo-class matches when an &lt; input &gt; element has its value autofilled by the browser. The class stops matching if the user edits the field.
+    </p>
+
+    <strong>Example:</strong> <br><br>
+
+    <label for="Name">Name</label> <br>
+    <input type="Name" autocomplete="Name" placeholder="Full Name">
+
+    <br><br>
+
+    <label for="Email">Email Addres</label> <br>
+    <input type="Email" name="Email" autocomplete="Email" placeholder="Name@gmail.Com">
     
-<p>
+    <br><br>
+
+    <label for="Country">Country</label> <br>
+    <input type="Country" autocomplete="Country" >
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+    <h2>
+      :checked
+    </h2>
+
+    <p>
+      The :autofill CSS pseudo-class matches when an &lt; input &gt; element has its value autofilled by the browser. The class stops matching if the user edits the field.
+    </p>
+
+    <label><input class="checked-input" type="radio" name="Bule" value="Male" >Male</label> <br><br>
+    <label><input class="checked-input" type= "radio" name="Bule" value="Female" >Female</label>
+
+    <br>
+    <br>
+
+    <label><input class="checked-input" type="checkbox"  value="Chess" >Chess</label> <br><br>
+    <label><input class="checked-input" type= "Checkbox"  value="Sudoku" >Sudoku</label>
     
-        <li>A CSS pseudo-class is a keyword added to a selector that specifies a special state of the selected element(s).
-        For example, the pseudo-class :hover can be used to select a button when a user's pointer hovers over the button and this selected button can then be styled.</li>
+  </fieldset>
+
+
     
-</p>
+
+    
+
 
 
 
@@ -93,21 +174,14 @@
           <td class="notranslate">p:first-child</td>
           <td>Selects every &lt;p&gt; elements that is the first child of its parent</td>
         </tr>
-        <tr>
-          <td><a href="/cssref/sel_first-of-type.asp">:first-of-type</a></td>
-          <td class="notranslate">p:first-of-type</td>
-          <td>Selects every &lt;p&gt; element that is the first &lt;p&gt; element of its parent</td>
-        </tr>
+        
         <tr>
           <td><a href="/cssref/sel_focus.asp">:focus</a></td>
           <td class="notranslate">input:focus</td>
           <td>Selects the &lt;input&gt; element that has focus</td>
         </tr>
-        <tr>
-          <td><a href="/cssref/sel_hover.asp">:hover</a></td>
-          <td class="notranslate">a:hover</td>
-          <td>Selects links on mouse over</td>
-        </tr>
+        
+        
         <tr>
           <td><a href="/cssref/sel_in-range.asp">:in-range</a></td>
           <td class="notranslate">input:in-range</td>
@@ -226,46 +300,7 @@
 
     <fieldset>
 
-        <h1><center>All CSS Pseudo Elements</center></h1>
-
-        <table border="1">
-        <tbody><tr>
-            <th style="width:20%">Selector</th>
-            <th style="width:20%">Example</th>
-            <th>Example description</th>
-          </tr>
-        <tr>
-            <td><a href="/cssref/sel_after.asp">::after</a></td>
-            <td class="notranslate">p::after</td>
-            <td>Insert content after every &lt;p&gt; element</td>
-            </tr>
-          <tr>
-        <td><a href="/cssref/sel_before.asp">::before</a></td>
-            <td class="notranslate">p::before</td>
-            <td>Insert content before every &lt;p&gt; element</td>
-            </tr>
-        <tr>
-            <td><a href="/cssref/sel_firstletter.asp">::first-letter</a></td>
-            <td class="notranslate">p::first-letter</td>
-            <td>Selects the first letter of every &lt;p&gt; element</td>
-          </tr>
-        <tr>
-            <td><a href="/cssref/sel_firstline.asp">::first-line</a></td>
-            <td class="notranslate">p::first-line</td>
-            <td>Selects the first line of every &lt;p&gt; element</td>
-          </tr>
-        <tr>
-            <td><a href="/cssref/sel_marker.asp">::marker</a></td>
-            <td class="notranslate">::marker</td>
-            <td>Selects the markers of list items</td>
-          </tr>
-        <tr>
-            <td><a href="/cssref/sel_selection.asp">::selection</a></td>
-            <td class="notranslate">p::selection</td>
-            <td>Selects the portion of an element that is selected by a user</td>
-          </tr>
-        </tbody>
-    </table>
+       
     </fieldset>
     
 
@@ -273,79 +308,6 @@
 <hr>
 <br>
 
-<fieldset>
-    
-
-    <ul>
-        <legend><strong>:focus</strong></legend>
-        <p>The :focus CSS pseudo-class represents an element (such as a form input) that has received focus. It is generally triggered when      the user clicks or taps on an element or selects it with the keyboard's Tab key.</p>
-
-    </ul>
-
-    <input type="text">
-
-</fieldset>
-
-<br>
-
-<fieldset>
-    <ul>
-        <legend><strong>input:invalid</strong></legend> <br>
-        <input name="email" type="email" value="Name@Example.com"/>
-    </ul>
-</fieldset>
-
-<br>
-
-<fieldset>
-    <ul>
-        <legend><strong>checkbox in used background-color and outline</strong></legend> <br>
-        <input type="checkbox">
-    </ul>
-</fieldset>
-
-<br>
-
-<fieldset>
-    <ul>
-        <legend>
-            <strong>img:hover</strong>
-        </legend>
-        <p>The :hover CSS pseudo-class matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).</p>
-        <img src="D:\Image Computer\images.jpg" alt="">
-    </ul>
-</fieldset>
-
-<br>
-
-<fieldset>
-    <ul>
-        <legend>
-            <strong>
-                outline
-            </strong>
-        </legend>
-
-        <p>The outline CSS shorthand property sets most of the outline properties in a single declaration.</p>
-    </ul>
-
-    
-
-    <br>
-
-    <div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora reprehenderit nemo consectetur qui possimus hic corporis, ex reiciendis soluta delectus, inventore officia mollitia eos asperiores praesentium quam commodi consequuntur?
-        </p>
-    </div>
-
-    <p><strong>Outline using color</strong></p>
-
-    empty
-    <div id="Ytpme"></div>
-
-
-</fieldset>
 
 <br>
 
