@@ -3,46 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Intro</title>
+    <title>1 Intro</title>
+
+    <style>
+
+      /* :active pseudo class */
+
+      .active{
+        background-color: slategrey;
+        border: none;
+        width: 140px;
+        height: 40px;
+      }
+
+      a:any-link{
+        color: blueviolet;
+        text-decoration-color:red ;
+      }
+
+      input:invalid {
+        border: none;
+        outline: 2px solid red;
+        border-radius: 5px;
+      }
+
+      input:focus{
+        background-color: rgb(194, 209, 224);
+      }
+
+      input[type='checkbox']:checked {
+        border: 2px solid rgb(28, 255, 20);
+        outline: 2px solid rgb(20, 212, 255);
+    }
+
+
+      
+
+     </style>
+
 </head>
 <body>
 
-    <h1><center>CSS Intro</center></h1>
 
-   <p><li><strong>CSS is the language we use to style a Web page.</strong></li></p>
+
+    <h1><center>Pseudo Classes</center></h1>
+
+  <fieldset>
+    <h2>:active</h2>
+
+    <p>
+      The :active CSS pseudo-class represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.
+    </p>
+
+    <strong>Example:</strong> <br><br>
+
+    <button class="active" >Submit</button>
+
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+    <h2>:any-link</h2>
+
+    <p>
+      The :any-link CSS pseudo-class selector represents an element that acts as the source anchor of a hyperlink, independent of whether it has been visited.
+    </p>
+
+    <strong>Example:</strong> <br><br>
+
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:any-link">MDN Web Docs</a>
+
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+    <h2>
+      :autofill
+    </h2>
+
+    <p>
+      The :autofill CSS pseudo-class matches when an &lt; input &gt; element has its value autofilled by the browser. The class stops matching if the user edits the field.
+    </p>
+
+    <strong>Example:</strong> <br><br>
+
+    <label for="Name">Name</label> <br>
+    <input type="Name" autocomplete="Name" placeholder="Full Name">
+
+    <br><br>
+
+    <label for="Email">Email Addres</label> <br>
+    <input type="Email" name="Email" autocomplete="Email" placeholder="Name@gmail.Com">
     
-    <fieldset>
-        <legend>
-            <h2>What is CSS?</h2>
-        </legend>
-            <p><li>CSS stands for Cascading Style Sheets</li></p>
-            <p><li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li></p>
-            <p><li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li></p>
-            <p><li>External stylesheets are stored in CSS files</li></p>
-            <p><li></li></p>
+    <br><br>
+
+    <label for="Country">Country</label> <br>
+    <input type="Country" autocomplete="Country" >
+  </fieldset>
+
+  <br>
+
+  <fieldset>
+    <h2>
+      :checked
+    </h2>
+
+    <p>
+      The :autofill CSS pseudo-class matches when an &lt; input &gt; element has its value autofilled by the browser. The class stops matching if the user edits the field.
+    </p>
+
+    <label><input class="checked-input" type="radio" name="Bule" value="Male" >Male</label> <br><br>
+    <label><input class="checked-input" type= "radio" name="Bule" value="Female" >Female</label>
+
+    <br>
+    <br>
+
+    <label><input class="checked-input" type="checkbox"  value="Chess" >Chess</label> <br><br>
+    <label><input class="checked-input" type= "Checkbox"  value="Sudoku" >Sudoku</label>
+    
+  </fieldset>
+
+
+    
+
+    
+
+
+
+
+<fieldset>
+
+    <h1><center>All CSS Pseudo Classes
+    </center></h1>
+
+    <table border="1" class="ws-table-all notranslate">
+        <tbody><tr>
+          <th style="width:20%">Selector</th>
+          <th style="width:20%">Example</th>
+          <th>Example description</th>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_active.asp">:active</a></td>
+          <td class="notranslate">a:active</td>
+          <td>Selects the active link</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_checked.asp">:checked</a></td>
+          <td class="notranslate">input:checked</td>
+          <td>Selects every checked &lt;input&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_disabled.asp">:disabled</a></td>
+          <td class="notranslate">input:disabled</td>
+          <td>Selects every disabled &lt;input&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_empty.asp">:empty</a></td>
+          <td class="notranslate">p:empty</td>
+          <td>Selects every &lt;p&gt; element that has no children</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_enabled.asp">:enabled</a></td>
+          <td class="notranslate">input:enabled</td>
+          <td>Selects every enabled &lt;input&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_firstchild.asp">:first-child</a></td>
+          <td class="notranslate">p:first-child</td>
+          <td>Selects every &lt;p&gt; elements that is the first child of its parent</td>
+        </tr>
+        
+        <tr>
+          <td><a href="/cssref/sel_focus.asp">:focus</a></td>
+          <td class="notranslate">input:focus</td>
+          <td>Selects the &lt;input&gt; element that has focus</td>
+        </tr>
+        
+        
+        <tr>
+          <td><a href="/cssref/sel_in-range.asp">:in-range</a></td>
+          <td class="notranslate">input:in-range</td>
+          <td>Selects &lt;input&gt; elements with a value within a specified range</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_invalid.asp">:invalid</a></td>
+          <td class="notranslate">input:invalid</td>
+          <td>Selects all &lt;input&gt; elements with an invalid value</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_lang.asp">:lang(<i>language</i>)</a></td>
+          <td class="notranslate">p:lang(it)</td>
+          <td>Selects every &lt;p&gt; element with a lang attribute value starting with "it"</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_last-child.asp">:last-child</a></td>
+          <td class="notranslate">p:last-child</td>
+          <td>Selects every &lt;p&gt; elements that is the last child of its parent</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_last-of-type.asp">:last-of-type</a></td>
+          <td class="notranslate">p:last-of-type</td>
+          <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_link.asp">:link</a></td>
+          <td class="notranslate">a:link</td>
+          <td>Selects all unvisited links</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_not.asp">:not(selector)</a></td>
+          <td class="notranslate">:not(p)</td>
+          <td>Selects every element that is not a &lt;p&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_nth-child.asp">:nth-child(n)</a></td>
+          <td class="notranslate">p:nth-child(2)</td>
+          <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_nth-last-child.asp">:nth-last-child(n)</a></td>
+          <td class="notranslate">p:nth-last-child(2)</td>
+          <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_nth-last-of-type.asp">:nth-last-of-type(n)</a></td>
+          <td class="notranslate">p:nth-last-of-type(2)</td>
+          <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_nth-of-type.asp">:nth-of-type(n)</a></td>
+          <td class="notranslate">p:nth-of-type(2)</td>
+          <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_only-of-type.asp">:only-of-type</a></td>
+          <td class="notranslate">p:only-of-type</td>
+          <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_only-child.asp">:only-child</a></td>
+          <td class="notranslate">p:only-child</td>
+          <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_optional.asp">:optional</a></td>
+          <td class="notranslate">input:optional</td>
+          <td>Selects &lt;input&gt; elements with no "required" attribute</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_out-of-range.asp">:out-of-range</a></td>
+          <td class="notranslate">input:out-of-range</td>
+          <td>Selects &lt;input&gt; elements with a value outside a specified range</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_read-only.asp">:read-only</a></td>
+          <td class="notranslate">input:read-only</td>
+          <td>Selects &lt;input&gt; elements with a "readonly" attribute specified</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_read-write.asp">:read-write</a></td>
+          <td class="notranslate">input:read-write</td>
+          <td>Selects &lt;input&gt; elements with no "readonly" attribute</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_required.asp">:required</a></td>
+          <td class="notranslate">input:required</td>
+          <td>Selects &lt;input&gt; elements with a "required" attribute specified</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_root.asp">:root</a></td>
+          <td class="notranslate">root</td>
+          <td>Selects the document's root element</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_target.asp">:target</a></td>
+          <td class="notranslate">#news:target</td>
+          <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_valid.asp">:valid</a></td>
+          <td class="notranslate">input:valid</td>
+          <td>Selects all &lt;input&gt; elements with a valid value</td>
+        </tr>
+        <tr>
+          <td><a href="/cssref/sel_visited.asp">:visited</a></td>
+          <td class="notranslate">a:visited</td>
+          <td>Selects all visited links</td>
+        </tr>
+      </tbody></table>
     
     </fieldset>
 
-    <fieldset>
-        <legend>
-            <h2>Why Use CSS?</h2>
-        </legend>
-        <p><li>CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</li></p>
-    </fieldset>
-
+    <br>
 
     <fieldset>
-        <legend>
-            <h2>Way to Adopt CSS</h2>
-        </legend>
-        <ul>
-            <li>Consistency is key. Even if you are doing everything wrong, remain consistent as it will be easier to fix them later. Find a naming convention that works for you, adopt a CSS methodology, organize styles the same way, define how many levels you nest selectors, etc.</li>
-            
-        </ul>
-    </fieldset>
 
+       
+    </fieldset>
     
 
+<br>
+<hr>
+<br>
+
+
+<br>
 
 
 </body>
