@@ -1,127 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pseudo Elements</title>
+
+    <style>
+        p ::after{
+            content: "Top Technology";
+        }
+
+        a {
+            color: #0000ff;
+            text-decoration: none;
+          }
+          
+          .local-link::before {
+            content: '🔗';
+          }
+
+          .first-letter::first-letter{
+            font-size: 30px;
+            color: red;
+          }
+
+          .first-line::first-line{
+            font-size: 30px;
+            color: brown;
+            text-decoration: underline;
+          }
+          
+          .selection::selection{
+            color: red;
+            background-color: blanchedalmond;
+          }
+         
+    </style>
 </head>
+
 <body>
 
-    <h1><center>All CSS Pseudo Elements</center></h1>
+    <h1>
+        <center>All CSS Pseudo Elements</center>
+    </h1>
 
     <table border="1">
-    <tbody><tr>
-        <th style="width:20%">Selector</th>
-        <th style="width:20%">Example</th>
-        <th>Example description</th>
-      </tr>
-    <tr>
-        <td><a href="/cssref/sel_after.asp">::after</a></td>
-        <td class="notranslate">p::after</td>
-        <td>Insert content after every &lt;p&gt; element</td>
-        </tr>
-      <tr>
-    <td><a href="/cssref/sel_before.asp">::before</a></td>
-        <td class="notranslate">p::before</td>
-        <td>Insert content before every &lt;p&gt; element</td>
-        </tr>
-    <tr>
-        <td><a href="/cssref/sel_firstletter.asp">::first-letter</a></td>
-        <td class="notranslate">p::first-letter</td>
-        <td>Selects the first letter of every &lt;p&gt; element</td>
-      </tr>
-    <tr>
-        <td><a href="/cssref/sel_firstline.asp">::first-line</a></td>
-        <td class="notranslate">p::first-line</td>
-        <td>Selects the first line of every &lt;p&gt; element</td>
-      </tr>
-    <tr>
-        <td><a href="/cssref/sel_marker.asp">::marker</a></td>
-        <td class="notranslate">::marker</td>
-        <td>Selects the markers of list items</td>
-      </tr>
-    <tr>
-        <td><a href="/cssref/sel_selection.asp">::selection</a></td>
-        <td class="notranslate">p::selection</td>
-        <td>Selects the portion of an element that is selected by a user</td>
-      </tr>
-    </tbody>
-</table>
-
-<fieldset>
-    
-
-    <ul>
-        <legend><strong>:focus</strong></legend>
-        <p>The :focus CSS pseudo-class represents an element (such as a form input) that has received focus. It is generally triggered when      the user clicks or taps on an element or selects it with the keyboard's Tab key.</p>
-
-    </ul>
-
-    <input type="text">
-
-</fieldset>
-
-<br>
-
-<fieldset>
-    <ul>
-        <legend><strong>input:invalid</strong></legend> <br>
-        <input name="email" type="email" value="Name@Example.com"/>
-    </ul>
-</fieldset>
-
-<br>
-
-<fieldset>
-    <ul>
-        <legend><strong>checkbox in used background-color and outline</strong></legend> <br>
-        <input type="checkbox">
-    </ul>
-</fieldset>
-
-<br>
-
-<fieldset>
-    <ul>
-        <legend>
-            <strong>img:hover</strong>
-        </legend>
-        <p>The :hover CSS pseudo-class matches when the user interacts with an element with a pointing device, but does not necessarily activate it. It is generally triggered when the user hovers over an element with the cursor (mouse pointer).</p>
-        <img src="D:\Image Computer\images.jpg" alt="">
-    </ul>
-</fieldset>
-
-<br>
-
-<fieldset>
-    <ul>
-        <legend>
-            <strong>
-                outline
-            </strong>
-        </legend>
-
-        <p>The outline CSS shorthand property sets most of the outline properties in a single declaration.</p>
-    </ul>
-
-    
+        <tbody>
+            <tr>
+                <th>Selector</th>
+                <th>Example</th>
+                <th>Example description</th>
+            </tr>
+            <tr>
+                <td><a href="#">::after</a></td>
+                <td>p::after</td>
+                <td>Insert content after every &lt;p&gt; element</td>
+            </tr>
+            <tr>
+                <td><a href="#">::before</a></td>
+                <td>p::before</td>
+                <td>Insert content before every &lt;p&gt; element</td>
+            </tr>
+            <tr>
+                <td><a href="#">::first-letter</a></td>
+                <td>p::first-letter</td>
+                <td>Selects the first letter of every &lt;p&gt; element</td>
+            </tr>
+            <tr>
+                <td><a href="#">::first-line</a></td>
+                <td>p::first-line</td>
+                <td>Selects the first line of every &lt;p&gt; element</td>
+            </tr>
+           
+            <tr>
+                <td><a href="#">::selection</a></td>
+                <td>p::selection</td>
+                <td>Selects the portion of an element that is selected by a user</td>
+            </tr>
+        </tbody>
+    </table>
 
     <br>
 
-    <div>
+    <fieldset>
+        <h2>
+            ::after
+        </h2>
+
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam tempora reprehenderit nemo consectetur qui possimus hic corporis, ex reiciendis soluta delectus, inventore officia mollitia eos asperiores praesentium quam commodi consequuntur?
+            In CSS, ::after creates a pseudo-element that is the last child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.
         </p>
-    </div>
 
-    <p><strong>Outline using color</strong></p>
+        <strong>Example:</strong>
 
-    empty
-    <div id="Ytpme"></div>
+        <div class="after">Nixit Tank</div>
+        <div class="after">Om Tank</div>
+        <div class="after">Vishal Tank</div>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>
+            ::before
+        </h2>
+
+        <p>
+            In CSS, ::before creates a pseudo-element that is the first child of the selected element. It is often used to add cosmetic content to an element with the content property. It is inline by default.
+        </p>
+
+        <strong>Example:</strong>
+
+        <p>
+            Learning resources for web developers can be found all over the internet. Try out
+            <a class="local-link" href="https://web.dev/">web.dev</a>, <a class="local-link" href="https://www.w3schools.com/">w3schools.com</a> or our
+            <a href="https://developer.mozilla.org/" class="local-link">MDN web docs</a>.
+          </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>
+            ::first-letter
+        </h2>
+
+        <p>
+            The ::first-letter CSS pseudo-element applies styles to the first letter of the first line of a block container, but only when not preceded by other content (such as images or inline tables).
+        </p>
+
+        <strong>Example:</strong>
+
+        <p class="first-letter">
+            Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>
+            ::first-line
+        </h2>
+
+        <p>
+            The ::first-line CSS pseudo-element applies styles to the first line of a block container.
+        </p>
+
+        <strong>Example:</strong>
+
+        <p class="first-line">
+            Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph.
+        </p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <h2>
+            ::selection
+        </h2>
+
+        <p>
+            The ::selection CSS pseudo-element applies styles to the part of a document that has been highlighted by the user (such as clicking and dragging the mouse across text).
+        </p>
+
+        <strong>Example:</strong>
+
+        <p class="selection">
+            My Name is Nixit Tank
+        </p>
+    </fieldset>
 
 
-</fieldset>
 
-    
+
 </body>
+
 </html>
